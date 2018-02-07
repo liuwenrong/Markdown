@@ -10,5 +10,6 @@ author: 刘文荣Roger
 
 ## 新华99版本,修改布局
 
+[YY3-7873][ROM][4/4] Modify default_workspace.xml by WpsEmail for xinhua99
 [YY3-7873][ROM][3/3] Modify default_workspace.xml by sogou browser for xinhua99
 [YY3-7873][ROM][2/2] Modify default_workspace.xml by add kuaishou for xinhua99
