@@ -1,6 +1,6 @@
 ---
 title: Markdown笔记对比
-tags: 新建,模板,小书匠, Markdown
+tags: Tools,Roger,小书匠, Markdown
 grammar_cjkRuby: true
 ---
 
@@ -17,6 +17,7 @@ grammar_cjkRuby: true
 # 二.小书匠配合码云
 1. md源码存储,不用转换成印象笔记,有道云格式
 2. 有git提交记录
+3. 统一保存所有未同步的文件
 
 
 **马克飞象-印象笔记**
