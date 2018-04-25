@@ -80,7 +80,7 @@ grammar_cjkRuby: true
 ![enter description here](./images/FileBrowserEditFile.png "FileBrowserEditFile")
 
 # 四. 结论
-## 
+## 主要功能对比
 | 功能 | Files Go | 华为 | ES | 源生 |
 | - | :-: | :-: | :-: | :-: |
 | SD卡文件列表 | × | √ | √ | √ |
