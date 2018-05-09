@@ -15,6 +15,8 @@ grammar_cjkRuby: true
 	- WirelessSettingsActivity
 	- ...
 
+[Android 4.4Settings 源码阅读记录-1407](https://blog.csdn.net/adayabetter/article/details/43409955)
+
 # 添加设置流程
 > 例:添加手势截屏页面
 
