@@ -57,6 +57,11 @@ accessibility_settings.xml
 
 ```
 
+其中Preference是v7包下的 android.support.v7.preference.Preference
+
+去找安卓8.1的v7包源码在frameworks\support\v7\preference\src\android\support\v7\preference\
+
+
 # 添加设置流程
 > 例:添加手势截屏页面
 
@@ -67,4 +72,49 @@ accessibility_settings.xml
             /* Add switch control gesture screenshot, renxu@coolpad.com, 2017.12.22 */
             GestureScreenshotSettings.class.getName(),
             /* BaoliYota end */
+```
+
+R.xml.device_info_settings.xml
+```xml
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
+    android:title="@string/about_settings" >
+
+    <!-- System update settings - launches activity -->
+    <PreferenceScreen
+        android:key="system_update_settings"
+        android:summary="@string/system_update_settings_list_item_summary"
+        android:title="@string/system_update_settings_list_item_title" >
+        <intent android:action="android.settings.SYSTEM_UPDATE_SETTINGS" />
+    </PreferenceScreen>
+
+    <!-- Device hardware model -->
+    <Preference
+        android:enabled="false"
+        android:key="device_name"
+        android:shouldDisableView="false"
+        android:summary="@string/device_info_default"
+        android:title="@string/softap_equipments_name" />
+
+    <!-- Device hardware model -->
+    <Preference
+        android:enabled="false"
+        android:key="device_model"
+        android:shouldDisableView="false"
+        android:summary="@string/device_info_default"
+        android:title="@string/model_number" />
+...
+```
+
+其中 Preferencer是import android.support.v7.preference.Preference;
+众思还自定义了一个com.android.settings.SettingsPreference extends Preference
+Android.mk中引用了
+```
+LOCAL_STATIC_JAVA_LIBRARIES := \
+    libcore \
+    android-support-v4 \
+    android-support-v13 \
+    android-support-v7-recyclerview \
+    android-support-v7-preference \
+
 ```
