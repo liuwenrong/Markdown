@@ -60,6 +60,40 @@ accessibility_settings.xml
 其中Preference是v7包下的 android.support.v7.preference.Preference
 
 去找安卓8.1的v7包源码在frameworks\support\v7\preference\src\android\support\v7\preference\
+在Preference的构造方法中
+```
+	final TypedArray a = context.obtainStyledAttributes(
+                attrs, R.styleable.Preference, defStyleAttr, defStyleRes);
+				//...
+	//8.1新增的 疑似设置项左边的图标 图标空间是否预留
+        mIconSpaceReserved = TypedArrayUtils.getBoolean(a, R.styleable.Preference_iconSpaceReserved,
+                R.styleable.Preference_android_iconSpaceReserved, false);
+				
+```
+
+可以通过下面这句话控制不可见还是gone
+```
+final ImageView imageView = (ImageView) holder.findViewById(android.R.id.icon);
+imageView.setVisibility(mIconSpaceReserved ? View.INVISIBLE : View.GONE);
+
+       View imageFrame = holder.findViewById(R.id.icon_frame);
+	   imageFrame.setVisibility(mIconSpaceReserved ? View.INVISIBLE : View.GONE);
+```
+在frameworks\support\v7\preference\res\layout\preference.xml 找到icon和icon_frame
+frameworks\support\v7\preference\res\values找到attrs.xml
+```xml
+    <!-- Base attributes available to Preference. -->
+    <declare-styleable name="Preference">
+		...
+	<!-- Whether the space for the preference icon view will be reserved. If set to true, the
+             preference will be offset as if it would have the icon and thus aligned with other
+             preferences having icons. By default, preference icon view visibility will be set to
+             GONE when there is no icon provided, so the default value of this attribute is false.
+             -->
+        <attr name="iconSpaceReserved" format="boolean" />
+        <attr name="android:iconSpaceReserved" />
+    </declare-styleable>
+```
 
 
 # 添加设置流程
