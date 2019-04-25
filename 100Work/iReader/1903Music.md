@@ -70,3 +70,7 @@ Fragment.onCreateView()  --> mPlayerPresenter.onPlay(mPlayingInfo);  -->   Audio
 3. 录音点列表崩溃(音乐插件未安装)
 4. 录音列表隐藏 音乐人 未知
 5. 重命名后更新AudioController
+
+残影问题:
+                    ViewAPI.invalidate(mRootView, ViewAPI.UI_EINK_GC16_FULL_MODE);// 全刷
+                ViewAPI.postInvalidate(this, ViewAPI.UI_EINK_DU_PART_MODE);//局刷

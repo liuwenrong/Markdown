@@ -162,3 +162,126 @@ xhdpi  192dp 不生效
 
 4. Set排序?  /storage/emulated/0/iReader/ting/files/30015728/4.abk  最后一个斜杆和最后一个.
 data = net invalid  eventType = 0
+
+190315 今日工作: 
+1. 节目列表标题改成黑色
+2. 下载管理tab 字号,空白页文字颜色,字号
+3. 优化音乐列表UI,解决长按删除后,无法响应单击事件
+4. 解决禅道剩余的自定义词典bug
+
+190316 今日工作:
+1. 清理了禅道上的所有bug
+2. 优化音乐列表和下载管理-集管理等界面的UI
+
+190318 今日工作:
+1. 下载管理-下载中-节目标题限制一行 
+2. 下载tab 的indicator 高度改成2dp
+3. 存储空间不足时,toast提示用户
+4. 下载管理-已下载-间距,集管理-标题颜色
+5. 解决禅道上提的bug
+file write error
+
+190319 今日工作:
+1. 自定义词典和下载管理优化界面
+2. 解决禅道上的bug
+
+190320 今日工作:
+1. 下载中状态修改的点击焦点 改成整个item
+2. 解决蓝牙翻页的的bug
+3. 解决全局控制器循环跳转音乐的bug
+
+190321 今日工作:
+1. 下载管理集-管理-空白页
+2. 下载管理-集管理-删除当前页回到上一页
+3. 下载管理-也下载和下载中切换导致全选状态不一致
+
+190322 今日工作:
+1. 删除书籍时,正在下载中的任务也删除
+2. 加入下载完成回调多次的问题
+3. 解决下载进度显示叠加的问题
+
+190325 今日工作:
+1. 清空禅道上bug
+2. 检查听书下载,音乐等功能的稳定性
+
+190326 今日工作:
+1. 修改下载中的几个图标和间隔
+2. 分析几个低概率崩溃问题
+
+190327 今日工作:
+1. 解决低概率播放崩溃问题
+2. 工程模式添加两个开关
+3. 查看分析aac格式音乐有些时长不对的问题
+
+190328 今日工作:
+1. 蓝牙翻页器返回键的问题
+2. 蓝牙翻页器听书频道翻页
+3. 解决tab切换回来没有焦点导致不能翻页的问题
+
+190329 今日工作:
+1. 音乐播放器时间问题 bug901
+2. 
+
+190401 今日工作:
+1. 音乐播放器时间问题 bug901
+2. 产线入口修改休眠的两个开关默认值
+
+
+190403 
+1. 优化播放页布局,优化音量条残影问题bug918
+
+1. 下载管理-集管理-删除后更新标题数量
+
+
+190417 移植
+
+* c49c0c723 修改工程模式两个默认值 
+* 939e129be 蓝牙翻页器相关问题修改 √
+* abe5efe92 解决json解析时int型溢出的问题 √
+* d49e4a4fa 解决蓝牙翻页器的bug √
+* 0f70fd491 自定义词典相关修改 √
+* 5aadf0bf1 解决词典为空,index为负数的问题 √
+* 956adeb32 自定义词典相关bug,文案,没有有道词典的显示问题 √
+* 24aa5586f 解决计费时,网络正常时也提示网络不畅的问题 √
+* 68326d8fe 自定义词典相关bug和ui问题优化 √
+* 14a884898 解决了自定义词典相关的bug √
+* 0dd1981b1 修改UI,以及对没有安装音乐插件的处理 √
+* c08b12ae3 添加跳转音乐的入口 √ 
+* 809d64174 移植听书功能到r608,增加数据库字段speakName √ 
+* f10978277 自定义词典和蓝牙翻页器功能,需更新einkbase[1/2] √
+
+    解决了自定义词典相关的bug
+
+    Signed-off-by: liuwenrong <liuwenrong@zhangyue.com>
+
+commit 0dd1981b168a79a3b269bd0443fbb788d19f5850
+Author: liuwenrong <liuwenrong@zhangyue.com>
+Date:   Fri Mar 8 18:12:58 2019 +0800
+
+    修改UI,以及对没有安装音乐插件的处理
+
+    Signed-off-by: liuwenrong <liuwenrong@zhangyue.com>
+
+commit c08b12ae39133b4fd0d16390553f36ea6e77d788
+Author: liuwenrong <liuwenrong@zhangyue.com>
+Date:   Wed Mar 6 21:16:53 2019 +0800
+
+    添加跳转音乐的入口
+
+    Signed-off-by: liuwenrong <liuwenrong@zhangyue.com>
+
+commit 809d64174215626979eb54fd3913ffcd0efc193c
+Author: liuwenrong <liuwenrong@zhangyue.com>
+Date:   Fri Mar 1 16:49:27 2019 +0800
+
+    移植听书功能到r608,增加数据库字段speakName
+
+    Signed-off-by: liuwenrong <liuwenrong@zhangyue.com>
+
+commit f10978277a9c492b3ddeb3ee9541bfd376615635
+Author: liuwenrong <liuwenrong@zhangyue.com>
+Date:   Mon Dec 17 10:01:03 2018 +0800
+
+    自定义词典和蓝牙翻页器功能,需更新einkbase[1/2]
+
+    Signed-off-by: liuwenrong <liuwenrong@zhangyue.com>

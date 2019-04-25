@@ -15,7 +15,8 @@
         return mDelegateView != null && (keyCode == KeyEvent.KEYCODE_VOLUME_DOWN || keyCode == KeyEvent.KEYCODE_VOLUME_UP);
     }
    	return mDelegateView.dispatchKeyEvent(event); 
-- AutoPageTextLayout
+- AutoPageTextLayout  
+    - dispatchKeyEvent
 - PageLinearLayout
 	- dispatchKeyEvent //翻页的具体实现
 

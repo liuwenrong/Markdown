@@ -3,8 +3,16 @@ DisplayMetrics{density=1.5, width=1072, height=1376, scaledDensity=1.5, xdpi=213
 - R1001 --> 新版Smart 19年上市 1872x1404 10寸 hdpi 对角线 2340 每寸234px
 
 - ActivityHome 主界面 4个Tab
+ public static final Class TAB_CLASS_SHELF       = FmContainerShelf.class;  // 书架  
+ public static final Class TAB_CLASS_STORE       = FmContainerOnline.class; // 书城  FragmentStoreMainNew  FragmentStoreMainChannel 
+ public static final Class TAB_CLASS_LISTEN      = FmContainerAudioBook.class; // 听书 FragmentStoreMainAudio FragmentAudioBookModule FragmentAudioStoreChannel 频道是啥
+ public static final Class TAB_CLASS_ACCOUNT     = FmContainerAccount.class; // 我的
+
+
 
 AlertDialog 在UiUtil.showAlertDialog()
+FragmentUserCloudBook 下过的书
+FragmentUserConsumptionRecord 消费记录
 
 # 适配
 PageItemCount  控制不同设备不通条目个数
